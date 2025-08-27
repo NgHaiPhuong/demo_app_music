@@ -5,6 +5,8 @@ import 'package:dusk_still_down/features/presentation/monthly_ranking/monthly_ra
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../popular_playlist/screen/popular_screen.dart';
+
 class SeeAllPage extends StatefulWidget {
   const SeeAllPage({super.key});
 
@@ -97,7 +99,14 @@ class _SeeAllPageState extends State<SeeAllPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Image.asset("assets/image/choose.png", width: 35, height: 22),
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PopularScreenPage(),
+                      ),
+                    );
+                  }, child: Image.asset("assets/image/choose.png", width: 35, height: 22)),
                 ],
               ),
             ),

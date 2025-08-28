@@ -5,6 +5,7 @@ import 'package:dusk_still_down/features/presentation/monthly_ranking/monthly_ra
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../new/screen/new_page.dart';
 import '../../popular_playlist/screen/popular_screen.dart';
 
 class SeeAllPage extends StatefulWidget {
@@ -39,16 +40,20 @@ class _SeeAllPageState extends State<SeeAllPage> {
                     ),
                   ),
                   InkWell(
-                      onTap:() {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const MonthlyRankingPage(),
-                          ),
-                        );
-                      },
-                      child: Image.asset(
-                          "assets/image/choose.png", width: 35, height: 22)),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MonthlyRankingPage(),
+                        ),
+                      );
+                    },
+                    child: Image.asset(
+                      "assets/image/choose.png",
+                      width: 35,
+                      height: 22,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -99,14 +104,21 @@ class _SeeAllPageState extends State<SeeAllPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  InkWell(onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const PopularScreenPage(),
-                      ),
-                    );
-                  }, child: Image.asset("assets/image/choose.png", width: 35, height: 22)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PopularScreenPage(),
+                        ),
+                      );
+                    },
+                    child: Image.asset(
+                      "assets/image/choose.png",
+                      width: 35,
+                      height: 22,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -132,15 +144,15 @@ class _SeeAllPageState extends State<SeeAllPage> {
                                 fontWeight: FontWeight.bold,
                                 foreground: Paint()
                                   ..shader =
-                                  const LinearGradient(
-                                    colors: [
-                                      AppColors.color_002369,
-                                      AppColors.color_001236,
-                                      Colors.black,
-                                    ],
-                                  ).createShader(
-                                    const Rect.fromLTWH(0, 0, 200, 70),
-                                  ),
+                                      const LinearGradient(
+                                        colors: [
+                                          AppColors.color_002369,
+                                          AppColors.color_001236,
+                                          Colors.black,
+                                        ],
+                                      ).createShader(
+                                        const Rect.fromLTWH(0, 0, 200, 70),
+                                      ),
                               ),
                             ),
                             Text(
@@ -175,15 +187,15 @@ class _SeeAllPageState extends State<SeeAllPage> {
                                 fontWeight: FontWeight.bold,
                                 foreground: Paint()
                                   ..shader =
-                                  const LinearGradient(
-                                    colors: [
-                                      AppColors.color_002369,
-                                      AppColors.color_001236,
-                                      Colors.black,
-                                    ],
-                                  ).createShader(
-                                    const Rect.fromLTWH(0, 0, 200, 70),
-                                  ),
+                                      const LinearGradient(
+                                        colors: [
+                                          AppColors.color_002369,
+                                          AppColors.color_001236,
+                                          Colors.black,
+                                        ],
+                                      ).createShader(
+                                        const Rect.fromLTWH(0, 0, 200, 70),
+                                      ),
                               ),
                             ),
                             Text(
@@ -207,27 +219,6 @@ class _SeeAllPageState extends State<SeeAllPage> {
               clipBehavior: Clip.none,
               alignment: Alignment.topCenter,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(51, 0, 50, 0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "News",
-                        style: TextStyle(
-                          color: AppColors.color_6FABD3,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Image.asset(
-                        "assets/image/choose.png",
-                        width: 35,
-                        height: 22,
-                      ),
-                    ],
-                  ),
-                ),
                 Positioned(
                   top: -15,
                   child: Stack(
@@ -294,7 +285,6 @@ class _SeeAllPageState extends State<SeeAllPage> {
                     ],
                   ),
                 ),
-
                 Positioned(
                   top: 167,
                   child: ImageFiltered(
@@ -332,6 +322,37 @@ class _SeeAllPageState extends State<SeeAllPage> {
                         ],
                       ),
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(51, 0, 50, 0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "News",
+                        style: TextStyle(
+                          color: AppColors.color_6FABD3,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const NewsPage(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          "assets/image/choose.png",
+                          width: 35,
+                          height: 22,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],

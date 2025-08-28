@@ -18,7 +18,7 @@ class _MonthlyRankingPageState extends State<MonthlyRankingPage> {
   @override
   void initState() {
     super.initState();
-    celebList = LoadingData().getData();
+    celebList = LoadingData().getDataCeleb();
   }
 
   @override
@@ -47,7 +47,7 @@ class _MonthlyRankingPageState extends State<MonthlyRankingPage> {
               ),
             ),
             ListView.builder(
-              padding: EdgeInsets.only(top: 12),
+              padding: EdgeInsets.only(top: 22),
               primary: false,
               itemCount: celebList.length,
               shrinkWrap: true,

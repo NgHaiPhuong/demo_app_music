@@ -27,4 +27,10 @@ class LoadingData {
       News(name: "10", url: "assets/image/drake.png", description: "Watch Justin Bieber step in for Drake in DJ Khaled’s....."),
     ];
   }
+
+  List<String> images = [
+    "assets/image/imagine.jpg",
+    "assets/image/happier.jpg",
+    "assets/image/havana.jpg",
+  ];
 }

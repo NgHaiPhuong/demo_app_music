@@ -48,14 +48,14 @@ class PopularScreenPageState extends State<PopularScreenPage> {
                         BoxShadow(
                           color: Colors.white.withValues(alpha: 0.8),
                           offset: const Offset(-10, -10), // Đổ bóng lên trên trái
-                          blurRadius: 20,
+                          blurRadius: 303,
                           spreadRadius: 10,
                         ),
                         // Bóng đen góc dưới phải
                         BoxShadow(
                           color: Colors.black.withValues(alpha: 0.25),
                           offset: const Offset(10, 10), // Đổ bóng xuống dưới phải
-                          blurRadius: 20,
+                          blurRadius: 30,
                           spreadRadius: 10,
                         ),
                       ],

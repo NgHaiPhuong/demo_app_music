@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:dusk_still_down/core/utils/color.dart';
+import 'package:dusk_still_down/core/utils/open_file.dart';
 import 'package:dusk_still_down/features/presentation/monthly_ranking/monthly_ranking.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +38,14 @@ class _SeeAllPageState extends State<SeeAllPage> {
                       color: AppColors.color_6FABD3,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: OpenFile().pickAudioFiles,
+                    child: Image.asset(
+                      "assets/image/plus.png",
+                      width: 28,
+                      height: 28,
                     ),
                   ),
                   InkWell(
